@@ -10,16 +10,16 @@ This is very basic in the sense that:
 print("Welcome to the Web Store")
 
 #inventory = print("Here is what we have in stock")
-inventory = {"Cup Cake": 500, "Coke": 200, "Bread": 300, "Milk": 250, "Chocolate": 150}
+inventory = {"1. Cup Cake": 500, "2. Coke": 200, "3. Bread": 300, "4. Milk": 250, "5. Chocolate": 150}
 print("Here is what we have in stock")
-for item in inventory.items():
-    print(item)
+for index, item in inventory.items():
+    print(index, item)
 
 buy_another = 1
 total_cost, total = 0, 0
   
 while buy_another != 0:
-    order = int(input("Type the number of what you want to buy: "))
+    order = int(input("Type the number corresponding to what you want to buy (e.g. 4 for milk): "))
     
     if order == 1:
         qty = int(input("How many Cup Cakes would you like?: "))
@@ -50,4 +50,4 @@ while buy_another != 0:
     
     buy_another = int(input("Would you like to shop for anything else?\nEnter 1 to continue or 0 to checkout: "))
 
-print(f"Your shopping cart costs {total_cost}\nThank you for shopping with us")    
+print(f"Your shopping cart costs {total_cost} naira\nThank you for shopping with us")    
